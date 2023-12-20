@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ТУРИСТ-PRO</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/app.js" defer></script>
+	<script src="libs/rain.js" defer></script>
+	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+	<main>
+		<!--Меню-->>
+
+		<header>
+			<nav class="nav container">
+			<a href="index.html" class="nav__logo"> ТУРИСТ-PRO</a>
+			<div class="nav__menu">
+				<ul class="nav__list">
+				<li class="nav__item">
+					<a href="book.html" class="nav__link">управление бронированием</a>
+				</li>
+				<li class="nav__item">
+					<a href="#stock" class="nav__link">акции</a>
+				</li> 
+				</ul>
+			</div>
+			</nav>
+		</header>
+		
+		<section class="layers">
+			<div class="layers__container">
+				<div class="layers__item layer-1" style="background-image: url(img/layer-1.jpg);"></div>
+				<div class="layers__item layer-2" style="background-image: url(img/layer-2.png);"></div>
+				<div class="layers__item layer-3">
+					<div class="hero-content">
+						<h1 class="title_first">ТУРИСТ-PRO</h1>
+						<div class="hero-content__p">Красивое путешествие, это просто!</div>
+						<button class="button-start"><a href="#comment" style="color: white;">Узнать больше</a></button>
+					</div>
+				</div>
+				<div class="layers__item layer-4">
+					<canvas class="rain"></canvas>
+				</div>
+				<div class="layers__item layer-5" style="background-image: url(img/layer-5.png);"></div>
+				<div class="layers__item layer-6" style="background-image: url(img/layer-6.png);"></div>
+			</div>
+		</section>
+
+		<section class="section book" id="book">
+			<h1 class="book__title">бронировать путешествие с нами - легко</h1>
+				<div class="book__container container grid">
+					<div class="book__item">
+						<div class="book__icon">
+						<i class='bx bxs-calendar-check'></i>
+						<p>выберите<br>дату</p>
+						<!-- <i class="bx bx-chevron-right"></i> -->
+						</div>
+						<div href="#" class="book__icon">
+						<i class='bx bxs-group'></i>
+						<p>укажите<br>участников</p>
+						<!-- <i class="bx bx-chevron-right"></i> -->
+						</div>
+						<div href="#" class="book__icon">
+						<i class='bx bxs-map' ></i>
+						<p>найдите<br>маршрут</p>
+						<!-- <i class="bx bx-chevron-right"></i> -->
+						</div>
+						<div href="#" class="book__icon">
+						<i class='bx bxs-message-alt-error' ></i>
+						<p>выберите<br />сложность</p>
+						<!-- <i class="bx bx-chevron-right"></i> -->
+						</div>
+					</div>
+				</div>
+				<div class="book__button">
+					<a href="book.html" class="book__button-link">забронировать <i id="book__chevron" class="bx bx-chevron-right"></i></a> 
+				</div>
+		</section>
+
+		<!-- Коментарий -->
+		<section id="comment"></section>
+		<section class="line comment">
+				<div class="block__comments">
+					<h1 class="review__title">Отзыва наших клиентов</h1>
+					<div class="block">
+						<p class="author"><i class='bx bxs-face'></i> Иван Иванов</p>
+						<p class="date">12 сентября 2021</p>
+						<div class="comment">
+							<p>Здравствуйте! Недели не прошло как вернулись из Тайланда. Тур покупали у Турист-Pro. 
+							Рейс Норд Винс был без задержек, кормили неплохо, 2 раза. 
+							По прилёту встреча была хорошо организована, без проблем нашли 
+							свой автобус. Нас быстро развезли.Трансферный гид, как и положено, 
+							выдала немного информации и проводила в отели до ресепшен.</p>
+						</div>
+					</div>
+					<div class="block">
+						<p class="author"><i class='bx bxs-face'></i> Мария Сидорова</p>
+						<p class="date">15 сентября 2022</p>
+						<div class="comment">
+						<p>На следующий день была инфо встреча с гидом  Валентином. 
+						Рассказал о правилах и услугах отеля, спросил, нет ли проблем с проживанием. </p>
+						</div>
+					</div>
+					<div class="block">
+						<p class="author"><i class='bx bxs-face'></i> Григорий Лепс</p>
+						<p class="date">17 моя 2022</p>
+						<div class="comment">
+							<p>Мы спросили Валентина про экскурсии, он ответил, что на некоторые 
+							вы и сами можете съездить, а на дальние он поможет. 
+							В общем, мы купили две экскурсии: в контактный зоопарк Кхао Кхао и 
+							"Вечерняя Паттая" с посещением обзорной площадки, шоу Колозиум и ужина 
+							в парке Мини Сиам. Обе экскурсии очень понравились, автобусы приходили вовремя, 
+							экскурсоводы были интересные.</p>
+						</div>
+					</div>
+				</div>
+		</section>
+		<section id="stock"></section>
+		<section class="section__stock">
+			<h1 class="stock__title">НАШИ АКЦИИ</h1>
+			<div class="stock__container container grid">
+			<div class="stock__item">
+				<img class="stock__item-img" src="img/man-gbf20fa773_1920.jpg">
+				<h3 class="stock__item-title">Горы</h3>
+				<p>Базовая информацию, текст на ваше усмотрение.</p>
+				<a href="" class="stock__item-more">подробнее..</a>
+			</div>
+			<div class="stock__item">
+				<img class="stock__item-img" src="img/mckenzie-river-g84dc3eb01_1920.jpg">
+				<h3 class="stock__item-title">Реки</h3>
+				<p>Базовая информацию, текст на ваше усмотрение.</p>
+				<a href="" class="stock__item-more">подробнее..</a>
+			</div>
+			</div>
+			</div>
+		</section>
+
+		<section class="section sub">
+			<div style="background-image: url(img/layer-5.png);"></div>
+			<h1 class="sub__title">подпишитесь, чтобы не пропустить<br>актуальные предложения!</h1>
+			<div class="sub__container container grid">
+			<div class="sub__email">
+			<input type="email" placeholder="ВВЕДИТЕ ВАШ E-MAIL" autocomplete="none">
+			</div>
+			<button class="sub__button">ПОДПИСАТЬСЯ</button>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="footer__container container grid">
+			<div class="footer__logo"><h3 class="footer__ti">ТУРИСТ-PRO</h3>
+			<p class="footer__number">7 (922) 766-76-73</p>
+			</div>
+			<div class="footer__links">
+				<h3 class="footer__title">компания</h3>
+				<ul>
+				<li class="footer__list">
+					<a href="index.html">О нас</a>
+				</li>
+				<li class="footer__list">
+					<a href="">Обратная связь</a>
+				</li>
+				</ul>
+			</div>
+			<div class="footer__links">
+				<h3 class="footer__title">полезное</h3>
+				<ul>
+				<li class="footer__list">
+					<a href="">Возврат</a>
+				</li>
+				<li class="footer__list">
+					<a href="#stock">Акции</a>
+				</li>
+				</ul>
+			</div>
+			<div class="footer__credit">
+				© 2021 ТУРИСТ-PRO
+			</div>
+			</div>
+      	</footer>
+	</main>
+</body>
+</html>

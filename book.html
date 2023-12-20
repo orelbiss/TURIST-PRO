@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ТУРИСТ-PRO - БРОНИРОВАНИЕ</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+	<main>
+    <header>
+			<nav class="nav container">
+			<a href="index.html" class="nav__logo"></i> ТУРИСТ-PRO</a>
+			<div class="nav__menu">
+				<ul class="nav__list">
+				<li class="nav__item">
+					<a href="book.html" class="nav__link">управление бронированием</a>
+				</li>
+				<li class="nav__item">
+					<a href="index.html#stock" class="nav__link">акции</a>
+				</li> 
+				</ul>
+			</div>
+			</nav>
+		</header>
+    <h1>Форма заказа</h1>
+
+    <form>
+      <h2>Данные о заказе:</h2>
+      <label for="region">Регион:</label>
+      <input type="text" id="region" name="region" required><br>
+  
+      <label for="route">Наименование маршрута:</label>
+      <input type="text" id="route" name="route" required><br>
+  
+      <label for="zones">Выбранные зоны для посещения:</label>
+      <input type="text" id="zones" name="zones" required><br>
+  
+      <label for="date">Предполагаемая дата отдыха:</label>
+      <input type="date" id="date" name="date" required><br>
+  
+      <h2>Выбор дополнительных услуг:</h2>
+      <label for="guide">Услуги проводника:</label>
+      <input type="checkbox" id="guide" name="guide"><br>
+  
+      <label for="equipment">Услуги аренды туристического оборудования:</label>
+      <input type="checkbox" id="equipment" name="equipment"><br>
+  
+      <label for="photographer">Услуги фотографа/видеооператора:</label>
+      <input type="checkbox" id="photographer" name="photographer"><br>
+  
+      <label for="insurance">Страхование от несчастных случаев:</label>
+      <input type="checkbox" id="insurance" name="insurance"><br>
+  
+      <h2>Дополнительные комментарии:</h2>
+      <textarea id="comments" name="comments"></textarea><br>
+  
+      <label for="email">Email заказчика:</label>
+      <input class= "email" type="email" id="email" name="email" required><br>
+  
+      <h2>Итоговая стоимость:</h2>
+      <p id="totalCost"></p>
+  
+      <button type="submit"><a href="index.html" style="color: white;">Оформить бронирование</a></button>
+    </form>
+  
+    <script>
+      // Обработка изменений в полях стоимости и дополнительных услуг для расчета общей стоимости
+      var guideCheckbox = document.getElementById('guide');
+      var equipmentCheckbox = document.getElementById('equipment');
+      var photographerCheckbox = document.getElementById('photographer');
+      var insuranceCheckbox = document.getElementById('insurance');
+      var totalCostOutput = document.getElementById('totalCost');
+  
+      function calculateTotalCost() {
+        var totalCost = 50000;
+  
+        if (guideCheckbox.checked)
+          totalCost += 5000;
+  
+        if (equipmentCheckbox.checked)
+          totalCost += 7500;
+  
+        if (photographerCheckbox.checked)
+          totalCost += 9000;
+  
+        if (insuranceCheckbox.checked)
+          totalCost += 11500;
+  
+        totalCostOutput.textContent = totalCost + ` рублей (50000 тур + ${totalCost - 50000} доп услуг)`;
+      }
+  
+      guideCheckbox.addEventListener('change', calculateTotalCost);
+      equipmentCheckbox.addEventListener('change', calculateTotalCost);
+      photographerCheckbox.addEventListener('change', calculateTotalCost);
+  
+      insuranceCheckbox.addEventListener('change', calculateTotalCost);
+    </script>
+      <footer class="footer">
+        <div class="footer__container container grid">
+        <div class="footer__logo"><h3 class="footer__ti">ТУРИСТ-PRO</h3>
+        <p class="footer__number">7 (922) 766-76-73</p>
+        </div>
+        <div class="footer__links">
+          <h3 class="footer__title">компания</h3>
+          <ul>
+          <li class="footer__list">
+            <a href="index.html">О нас</a>
+          </li>
+          <li class="footer__list">
+            <a href="">Обратная связь</a>
+          </li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h3 class="footer__title">полезное</h3>
+          <ul>
+          <li class="footer__list">
+            <a href="">Возврат</a>
+          </li>
+          <li class="footer__list">
+            <a href="#stock">Акции</a>
+          </li>
+          </ul>
+        </div>
+        <div class="footer__credit">
+          © 2021 ТУРИСТ-PRO
+        </div>
+        </div>
+          </footer>
+    </main>
+  </body>
+</html>
